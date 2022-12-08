@@ -49,6 +49,8 @@ class SelectableList<E, V> extends StatefulWidget {
 
   final Duration? animationDuration;
 
+  final ScrollPhysics? physics
+
   const SelectableList(
       {super.key,
       required this.items,
@@ -57,6 +59,7 @@ class SelectableList<E, V> extends StatefulWidget {
       required this.onItemSelected,
       required this.onItemDeselected,
       this.valueSelector,
+      this.physics,
       this.animationDuration});
 
   @override
@@ -74,6 +77,7 @@ class _SelectableListState<E, V> extends State<SelectableList<E, V>> {
       initialItemCount: _displayedItems.length,
       itemBuilder: _buildItem,
       shrinkWrap: true,
+      physics: widget.physics,
     );
   }
 
