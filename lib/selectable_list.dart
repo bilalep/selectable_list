@@ -49,7 +49,7 @@ class SelectableList<E, V> extends StatefulWidget {
 
   final Duration? animationDuration;
 
-  final ScrollPhysics? physics
+  final ScrollPhysics? physics;
 
   const SelectableList(
       {super.key,
